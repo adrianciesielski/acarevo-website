@@ -5,21 +5,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <title>ACaRevo | Engineering Intelligence</title>
-<link rel="stylesheet" href="style.css">
-
-</head>
- <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <title>ACaRevo | Engineering Intelligence</title>
+  <link rel="stylesheet" href="style.css">
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
+</head>
 <body>
 
   <nav>
     <div class="container nav-inner">
       <a class="logo" href="#">ACa<span>Revo</span></a>
 
-      <div class="nav-links">
+      <button
+        class="nav-toggle"
+        type="button"
+        aria-label="Open navigation menu"
+        aria-expanded="false"
+        aria-controls="nav-menu"
+      >
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+
+      <div class="nav-links" id="nav-menu">
         <a href="#services">Services</a>
         <a href="#industries">Industries</a>
         <a href="#projects">Projects</a>
@@ -202,6 +209,33 @@
       <div>Engineering Intelligence</div>
     </div>
   </footer>
+
+  <script>
+    (function () {
+      var nav = document.querySelector("nav");
+      var toggle = document.querySelector(".nav-toggle");
+      var links = document.querySelectorAll("#nav-menu a");
+
+      function setMenuOpen(isOpen) {
+        nav.classList.toggle("is-open", isOpen);
+        toggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+        toggle.setAttribute(
+          "aria-label",
+          isOpen ? "Close navigation menu" : "Open navigation menu"
+        );
+      }
+
+      toggle.addEventListener("click", function () {
+        setMenuOpen(!nav.classList.contains("is-open"));
+      });
+
+      links.forEach(function (link) {
+        link.addEventListener("click", function () {
+          setMenuOpen(false);
+        });
+      });
+    })();
+  </script>
 
 </body>
 </html>
