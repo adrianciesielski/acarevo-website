@@ -43,6 +43,7 @@ img {
   margin: 0 auto;
 }
 
+
 /* NAVIGATION */
 
 nav {
@@ -119,10 +120,10 @@ nav {
   background: #ffffff;
 }
 
+
 /* HERO */
 
 .hero {
-  min-height: calc(100vh - 76px);
   display: flex;
   align-items: center;
   position: relative;
@@ -130,7 +131,34 @@ nav {
   background: #08111f;
 }
 
-.hero::before {
+/* Pełnoekranowy hero tylko na stronie głównej */
+
+.hero:not(.hero-compact) {
+  min-height: calc(100vh - 76px);
+}
+
+/* Krótszy hero na podstronach */
+
+.hero.hero-compact {
+  min-height: 0;
+  height: auto;
+  padding: 75px 0;
+  align-items: center;
+}
+
+.hero.hero-compact .container {
+  height: auto;
+}
+
+.hero.hero-compact .hero-content {
+  max-width: 850px;
+}
+
+.hero.hero-compact h1 {
+  margin-bottom: 24px;
+}
+
+..hero::before {
   content: "";
   position: absolute;
   top: 0;
@@ -143,6 +171,10 @@ nav {
     rgba(22, 140, 255, 0.04)
   );
   border-left: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.hero.hero-compact::before {
+  display: none;
 }
 
 .hero::after {
@@ -158,6 +190,10 @@ nav {
   pointer-events: none;
 }
 
+.hero.hero-compact::after {
+  display: none;
+}
+
 .hero-layout {
   position: relative;
   z-index: 1;
@@ -170,6 +206,8 @@ nav {
 }
 
 .hero-content {
+  position: relative;
+  z-index: 1;
   max-width: 720px;
 }
 
@@ -223,6 +261,7 @@ h1 {
   gap: 14px;
   margin-top: 38px;
 }
+
 
 /* HERO PROFILE */
 
@@ -357,6 +396,7 @@ h1 {
   line-height: 1.45;
 }
 
+
 /* BUTTONS */
 
 .button {
@@ -393,6 +433,7 @@ h1 {
   border-color: var(--accent-light);
   color: var(--accent-light);
 }
+
 
 /* SECTIONS */
 
@@ -436,6 +477,7 @@ section {
 .section-dark .section-intro {
   color: var(--muted-dark);
 }
+
 
 /* CARDS */
 
@@ -499,6 +541,7 @@ section {
   line-height: 1.65;
 }
 
+
 /* INDUSTRIES */
 
 .industries-header {
@@ -551,6 +594,7 @@ section {
   line-height: 1.55;
 }
 
+
 /* PROJECTS */
 
 .projects {
@@ -601,9 +645,14 @@ section {
 }
 
 .project p {
+  margin-top: 16px;
   color: var(--muted-dark);
   font-size: 17px;
   line-height: 1.65;
+}
+
+.project .button {
+  margin-top: 26px;
 }
 
 .section-light .project {
@@ -624,6 +673,7 @@ section {
 .section-light .project p {
   color: #5f6d7c;
 }
+
 
 /* ABOUT */
 
@@ -689,6 +739,7 @@ section {
   line-height: 1.5;
 }
 
+
 /* LINKS */
 
 .industry-link {
@@ -716,6 +767,7 @@ section {
   opacity: 0.82;
   transform: translateX(3px);
 }
+
 
 /* CONTACT */
 
@@ -748,6 +800,7 @@ section {
   color: #b8c5d4;
 }
 
+
 /* FOOTER */
 
 footer {
@@ -763,6 +816,7 @@ footer {
   gap: 20px;
   flex-wrap: wrap;
 }
+
 
 /* TABLET */
 
@@ -834,7 +888,12 @@ footer {
   h1 {
     font-size: clamp(58px, 11vw, 86px);
   }
+
+  .hero.hero-compact {
+    padding: 65px 0;
+  }
 }
+
 
 /* MOBILE */
 
@@ -847,8 +906,13 @@ footer {
     height: 58px;
   }
 
-  .hero {
+  .hero:not(.hero-compact) {
     min-height: auto;
+  }
+
+  .hero.hero-compact {
+    min-height: 0;
+    padding: 55px 0;
   }
 
   .hero-layout {
@@ -861,6 +925,10 @@ footer {
     font-size: clamp(54px, 18vw, 74px);
     line-height: 0.92;
     letter-spacing: -3px;
+  }
+
+  .hero.hero-compact h1 {
+    font-size: clamp(48px, 15vw, 68px);
   }
 
   .hero-role {
@@ -934,6 +1002,10 @@ footer {
 
   section {
     padding: 75px 0;
+  }
+
+  .hero.hero-compact {
+    padding: 55px 0;
   }
 
   .contact-box {

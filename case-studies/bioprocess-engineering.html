@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Bioprocess Engineering | ACaRevo</title>
+  <link rel="stylesheet" href="../style.css">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+</head>
+<body>
+
+  <nav>
+    <div class="container nav-inner">
+     <a href="#" class="logo">
+    <img src="logo.PNG" alt="ACaRevo">
+</a>
+
+      <button
+        class="nav-toggle"
+        type="button"
+        aria-label="Open navigation menu"
+        aria-expanded="false"
+        aria-controls="nav-menu"
+      >
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+
+      <div class="nav-links" id="nav-menu">
+        <a href="#services">Services</a>
+        <a href="#industries">Industries</a>
+        <a href="#projects">Projects</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="container hero-content">
+      <div class="eyebrow">Engineering Intelligence</div>
+
+      <h1>Engineering expertise powering industrial transformation.</h1>
+
+      <p class="hero-text">
+        We help industrial companies solve complex manufacturing challenges through
+  engineering expertise, process understanding and digital technologies.
+      </p>
+
+      <div class="hero-buttons">
+  <a class="button button-primary" href="#services">Our Expertise</a>
+  <a class="button button-secondary" href="#contact">Let's Talk</a>
+</div>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="hero">
+        <div class="container">
+          <div class="hero-content">
+            <p class="eyebrow">Industry Focus</p>
+      
+            <h1>Bioprocess Engineering</h1>
+      
+            <p class="hero-text">
+              Model-based engineering, advanced process control and digital twins
+              for industrial bioprocesses.
+            </p>
+          </div>
+        </div>
+      </section>
+      
+      <section class="section">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">Case Studies</p>
+            <h2>Selected Projects</h2>
+          </div>
+      
+          <div class="projects">
+            <a href="continuous-bioethanol-production.html" class="project-link">
+                <article class="project">
+                  <small>Digital Twin</small>
+                  <h3>Continuous Bioethanol Production</h3>
+                  <p>
+                    Development of a dynamic process model for analyzing continuous
+                    fermentation behavior, operating conditions and process stability.
+                  </p>
+                </article>
+              </a>
+          </div>
+        </div>
+      </section>
+
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <div>© 2026 ACaRevo</div>
+      <div>Engineering Intelligence</div>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      var nav = document.querySelector("nav");
+      var toggle = document.querySelector(".nav-toggle");
+      var links = document.querySelectorAll("#nav-menu a");
+
+      function setMenuOpen(isOpen) {
+        nav.classList.toggle("is-open", isOpen);
+        toggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+        toggle.setAttribute(
+          "aria-label",
+          isOpen ? "Close navigation menu" : "Open navigation menu"
+        );
+      }
+
+      toggle.addEventListener("click", function () {
+        setMenuOpen(!nav.classList.contains("is-open"));
+      });
+
+      links.forEach(function (link) {
+        link.addEventListener("click", function () {
+          setMenuOpen(false);
+        });
+      });
+    })();
+  </script>
+
+</body>
+</html>
