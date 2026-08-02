@@ -1043,15 +1043,22 @@ footer {
 .about-image {
   position: sticky;
   top: 110px;
+
+  width: 100%;
+  max-width: 420px;
+  margin-left: auto;
 }
 
 .about-image img {
   display: block;
   width: 100%;
+  height: auto;
+
   aspect-ratio: 4 / 5;
   object-fit: cover;
   object-position: center top;
-  border-radius: 10px;
+
+  border-radius: 12px;
 }
 
 .about-links {
