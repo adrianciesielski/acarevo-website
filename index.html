@@ -1,6 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9SXD7DHC29"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('consent', 'default', {
+    'analytics_storage': 'denied',
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied'
+  });
+  gtag('js', new Date());
+
+  gtag('config', 'G-9SXD7DHC29');
+</script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -366,5 +381,20 @@
     })();
 
   </script>
+  <div id="cookie-banner" class="cookie-banner" hidden>
+    <div class="cookie-banner-content">
+      <p>
+        I use optional Google Analytics cookies to understand how visitors use
+        this website. Analytics is activated only with your consent.
+      </p>
 
+      <div class="cookie-banner-buttons">
+        <button id="cookie-reject" type="button">Reject</button>
+        <button id="cookie-accept" type="button">Accept analytics</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="cookie-consent.js"></script>
 </body>
+</html>
