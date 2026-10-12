@@ -3415,3 +3415,12 @@ body.experience-page main > section {
     grid-template-columns: 1fr;
   }
 }
+
+/* Tighten the founder intro-to-bio transition. */
+.engineering-background {
+  row-gap: 1rem;
+}
+
+.engineering-background-intro .engineering-company-path {
+  margin-bottom: 0;
+}
