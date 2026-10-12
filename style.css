@@ -1176,6 +1176,34 @@ footer {
   padding-top: 3rem;
 }
 
+/* Keep long-form subpages compact without changing the homepage rhythm. */
+body.education-page .subpage-hero {
+  padding-top: 7rem;
+  padding-bottom: 2.5rem;
+}
+
+body.education-page main > section {
+  padding-block: 64px;
+}
+
+body.education-page main > .education-overview {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+body.experience-page .experience-hero {
+  padding-top: 7rem;
+  padding-bottom: 2rem;
+}
+
+body.experience-page .experience-hero + .section-light {
+  padding-top: 2rem;
+}
+
+body.experience-page main > section {
+  padding-block: 64px;
+}
+
 .education-timeline {
   max-width: 940px;
   margin-top: 1.4rem;
@@ -1288,6 +1316,28 @@ footer {
 }
 
 @media (max-width: 600px) {
+  body.education-page .subpage-hero {
+    padding-top: 5.5rem;
+  }
+
+  body.education-page main > section,
+  body.experience-page main > section {
+    padding-block: 48px;
+  }
+
+  body.education-page main > .education-overview {
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+  }
+
+  body.experience-page .experience-hero {
+    padding-top: 5.5rem;
+  }
+
+  body.experience-page .experience-hero + .section-light {
+    padding-top: 1.5rem;
+  }
+
   .subpage-hero {
     padding-top: 7rem;
   }
