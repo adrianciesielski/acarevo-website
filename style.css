@@ -877,26 +877,26 @@ footer {
 
 @media (min-width: 601px) {
   body.privacy-page .subpage-hero h1 {
-    font-size: clamp(2.8rem, 4.7vw, 4.6rem);
+    font-size: clamp(2.8rem, 4vw, 3.5rem);
     white-space: nowrap;
   }
 }
 
 @media (max-width: 600px) {
   body.privacy-page .subpage-hero h1 {
-    font-size: clamp(2rem, 8vw, 2.8rem);
+    font-size: clamp(1.8rem, 7vw, 2.35rem);
   }
 }
 
 @media (min-width: 601px) {
   body.impressum-page .subpage-hero h1 {
-    font-size: clamp(2.8rem, 4.7vw, 4.6rem);
+    font-size: clamp(2.8rem, 4vw, 3.5rem);
   }
 }
 
 @media (max-width: 600px) {
   body.impressum-page .subpage-hero h1 {
-    font-size: clamp(2rem, 8vw, 2.8rem);
+    font-size: clamp(1.8rem, 7vw, 2.35rem);
   }
 }
 
