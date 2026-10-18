@@ -658,9 +658,10 @@ main > section {
   justify-content: space-between;
   min-height: 300px;
   padding: 32px;
-  border-radius: 16px;
-  background: #111827;
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+  background: #ffffff;
+  color: var(--text);
+  border: 1px solid var(--border-light);
   transition:
     transform 0.25s ease,
     border-color 0.25s ease,
@@ -668,15 +669,15 @@ main > section {
 }
 
 .project-item:hover {
-  transform: translateY(-5px);
-  border-color: rgba(82, 183, 255, 0.45);
-  box-shadow: 0 20px 45px rgba(15, 35, 60, 0.18);
+  transform: translateY(-7px);
+  border-color: rgba(22, 140, 255, 0.35);
+  box-shadow: 0 22px 60px rgba(15, 35, 60, 0.14);
 }
 
 .project-meta {
   display: block;
   margin-bottom: 18px;
-  color: #8ea0b5;
+  color: #667281;
   text-transform: uppercase;
   letter-spacing: 1.5px;
   font-size: 12px;
@@ -689,12 +690,12 @@ main > section {
   font-size: 26px;
   line-height: 1.25;
   letter-spacing: -0.3px;
-  color: #ffffff;
+  color: var(--text);
 }
 
 .project-item p {
   margin: 0;
-  color: #b8c5d4;
+  color: #5f6d7c;
   font-size: 16px;
   line-height: 1.7;
 }
@@ -702,7 +703,7 @@ main > section {
 .project-item > a {
   display: inline-block;
   margin-top: 28px;
-  color: #ffffff;
+  color: var(--accent);
   text-decoration: none;
   font-size: 14px;
   font-weight: 600;
@@ -719,7 +720,7 @@ main > section {
 .project-item .project-meta:last-child {
   margin-top: 22px;
   margin-bottom: 0;
-  color: #9db2c8;
+  color: var(--accent);
 }
 
 @media (max-width: 800px) {
@@ -821,6 +822,82 @@ footer {
   justify-content: space-between;
   gap: 20px;
   flex-wrap: wrap;
+}
+
+.footer-legal {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+}
+
+.footer-legal a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.footer-legal a:hover {
+  color: var(--text-light);
+}
+
+.privacy-content {
+  padding: 4rem 0 6rem;
+}
+
+.privacy-container {
+  max-width: 900px;
+}
+
+.privacy-container h2 {
+  margin: 2.5rem 0 0.75rem;
+  font-size: clamp(1.25rem, 2.3vw, 1.65rem);
+  line-height: 1.3;
+}
+
+.privacy-container p,
+.privacy-container address {
+  margin: 0 0 1rem;
+  color: var(--muted-body);
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+.privacy-container address {
+  font-style: normal;
+}
+
+.privacy-container a {
+  color: #087df5;
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}
+
+.privacy-container .privacy-updated {
+  font-size: 0.9rem;
+}
+
+@media (min-width: 601px) {
+  body.privacy-page .subpage-hero h1 {
+    font-size: clamp(2.8rem, 4.7vw, 4.6rem);
+    white-space: nowrap;
+  }
+}
+
+@media (max-width: 600px) {
+  body.privacy-page .subpage-hero h1 {
+    font-size: clamp(2rem, 8vw, 2.8rem);
+  }
+}
+
+@media (min-width: 601px) {
+  body.impressum-page .subpage-hero h1 {
+    font-size: clamp(2.8rem, 4.7vw, 4.6rem);
+  }
+}
+
+@media (max-width: 600px) {
+  body.impressum-page .subpage-hero h1 {
+    font-size: clamp(2rem, 8vw, 2.8rem);
+  }
 }
 
 /* TABLET */
